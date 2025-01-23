@@ -9,29 +9,34 @@ const app = express();
 
 app.use(express.json()); //to accept JSON data in the req.body
 
-// app.get('/products', (req, res) => {});
+//get all products
+app.get("/api/products", async (req, res) => {
+  try {
+    const products = await Product.find({});
+      res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    console.log("error in fetching products:", error.message);
+    res.status(500).json({ success: false, message: "Server Error"})
+  }
+});
 
 
 //create product
 app.post("/api/products", async (req, res) => {
   const product = req.body;
 
-  //check if all data is provided
   if (!product.name || !product.price || !product.image) {
     return res.status(400).json({ success:false, message: "Please fill in all the required fields"});
   }
 
-  //create the product
-
   const newProduct = new Product(product)
 
-  //save it in databse
   try {
     await newProduct.save();
     res.status(201).json({ success: true, data: newProduct});
   } catch (error) {
     console.error("Error in create product:", error.message);
-    res.status(500).json({ success: false, message: "Server Error"})
+    res.status(500).json({ success: false, message: "Server Error"});
   }
 
 });
@@ -45,7 +50,8 @@ app.delete("/api/products/:id", async (req, res) => {
     await Product.findByIdAndDelete(id);
     res.status(200).json({ success: true, message: "Product deleted"});
   } catch (error) {
-    res.status(400).json({ success: false, message: "Product not found" })
+    console.log("error in deleting product:", error.message);
+    res.status(400).json({ success: false, message: "Product not found" });
   }
 })
 
