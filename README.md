@@ -1,4 +1,4 @@
-# MERN WebApp
+# MERN WebApp (Practice Project)
 
 A full-stack MERN (MongoDB, Express.js, React, Node.js) web application, built with Vite for the frontend and Express.js for the backend.
 <br>
