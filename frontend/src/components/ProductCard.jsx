@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useProductStore } from "@/store/product";
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
-import { Box, Image, useColorModeValue, Heading, Text, HStack, VStack, Input, IconButton, useToast, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
+import { Box, Image, useColorModeValue, useColorMode, Heading, Text, HStack, VStack, Input, IconButton, useToast, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button } from "@chakra-ui/react"
 import { useState } from "react";
 
 const ProductCard = ({product}) => {
@@ -9,6 +9,7 @@ const ProductCard = ({product}) => {
 
   const textColor = useColorModeValue("gray.600", "gray.200");
   const bg= useColorModeValue("white", "gray.800");
+  const { colorMode } = useColorMode();
 
   // global zustand store functions
   const { deleteProduct, updateProduct } = useProductStore();
@@ -83,7 +84,11 @@ const ProductCard = ({product}) => {
         </Text>
 
         <HStack spacing={2}>
-          <IconButton icon={<EditIcon/>} onClick={onOpen} colorScheme="blue"/>
+          <IconButton icon={<EditIcon/>}
+            onClick={onOpen}
+            colorScheme={colorMode === "light" ? "teal" : "orange"}
+            />
+
           <IconButton icon={<DeleteIcon/>} onClick={() => handleDeleteProduct(product._id)} colorScheme="red"/>
         </HStack>
       </Box>
