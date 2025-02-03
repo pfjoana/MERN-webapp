@@ -19,7 +19,7 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) web application, built w
 <br><br>
 
 ## Tech Stack
-* Frontend: [React](https://reactjs.org), [Vite](https://vitejs.dev), [Chakra UI](https://chakra-ui.com)
+* Frontend: [React](https://reactjs.org), [Vite](https://vitejs.dev), [Chakra UI](https://v2.chakra-ui.com/)
 * Backend: [Node.js](https://nodejs.org), [Express.js](https://expressjs.com)
 * Database: [MongoDB](https://www.mongodb.com)
 * Deployment: [Render.com](https://render.com)
