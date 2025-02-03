@@ -54,12 +54,22 @@ npm install @chakra-ui/react@2 @emotion/react @emotion/styled framer-motion
 
 # Run the Project
 ### Development Mode (with nodemon)
+Start both the Backend and Frontend Servers in Development Mode.
+<br/>
+**For Backend (Express server):** Run this command to start the Express backend server with nodemon, which auto-restarts the server on code changes:
 ```
 npm run dev
 ```
-Runs the backend with nodemon, auto-restarting on changes.
+**For Frontend (React with Vite):** In a separate terminal, go to the frontend directory and run the following to start the React development server:
+```
+cd frontend
+npm run dev
+```
 
-### Build the Frontend
+### Deployment Mode
+**Build the Project:**
+<br>
+First, run the build command to bundle both the backend and frontend:
 ```
 npm run build
 ```
@@ -68,9 +78,11 @@ npm run build
 * Set NODE_ENV=deployment
 * Install dependencies for both backend and frontend
 * Build the frontend with Vite
+<br>
 
-
-### Start the Server
+**Start the Project:**
+<br>
+Now you can start the backend server in production mode
 ```
 npm start
 ```
