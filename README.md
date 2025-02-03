@@ -14,14 +14,15 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) web application, built w
 * RESTful API with Express.js
 * MongoDB database connection
 * React frontend bundled with Vite
+* Chakra UI for UI components
 * Deployment-ready for Render.com
 <br><br>
 
 ## Tech Stack
-* Frontend: React, Vite
-* Backend: Node.js, Express.js
-* Database: MongoDB
-* Deployment: Render.com
+* Frontend: [React](https://reactjs.org), [Vite](https://vitejs.dev), [Chakra UI](https://chakra-ui.com)
+* Backend: [Node.js](https://nodejs.org), [Express.js](https://expressjs.com)
+* Database: [MongoDB](https://www.mongodb.com)
+* Deployment: [Render.com](https://render.com)
 <br><br><br>
 
 # Installation & Setup
@@ -43,6 +44,12 @@ MONGO_URI=your_mongodb_connection_string
 PORT=5000
 ```
 *(Do not commit .env to Git as it contains sensitive data!)*
+
+### 4️⃣ Install Chakra UI
+If you haven’t installed Chakra UI yet, you can do so with the following command:
+```
+npm install @chakra-ui/react@2 @emotion/react @emotion/styled framer-motion
+```
 <br><br><br>
 
 # Run the Project
