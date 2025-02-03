@@ -24,19 +24,19 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) web application, built w
 * Deployment: Render.com
 <br><br><br>
 
-## Installation & Setup
-### Clone the repository
+# Installation & Setup
+### 1️⃣ Clone the repository
 ```
 git clone https://github.com/pfjoana/MERN-webapp
 cd your-repo
 ```
 
-### Install Dependencies
+### 2️⃣ Install Dependencies
 ```
 npm install && npm install --prefix frontend
 ```
 
-### Set Up Environment Variables
+### 3️⃣ Set Up Environment Variables
 Create a _.env_ file in the root directory and add:
 ```
 MONGO_URI=your_mongodb_connection_string
@@ -45,7 +45,7 @@ PORT=5000
 *(Do not commit .env to Git as it contains sensitive data!)*
 <br><br><br>
 
-## Run the Project
+# Run the Project
 ### Development Mode (with nodemon)
 ```
 npm run dev
@@ -76,11 +76,11 @@ npm start
 **The app should now be running on http://localhost:5000/**
 <br><br><br>
 
-## Deployment (Render.com)
+# Deployment (Render.com)
 * The project is deployed on Render.com.
 * NODE_ENV is set directly in the scripts (start and build).
 * The _.env_ file is ignored, so MongoDB credentials must be set in Render's environment variables.
-<br><br><br>
+<br><br>
 
 **Notes**<br>
 Free instances on Render sleep after inactivity but restart when accessed.<br>
