@@ -5,7 +5,6 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) web application, built w
 
 ## Quick Links
 - [🌐 Live App](https://mern-webapp-8pag.onrender.com/)
-- [📂 GitHub Repository](https://github.com/pfjoana/MERN-webapp)
 
 
 ## Features
